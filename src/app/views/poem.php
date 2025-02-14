@@ -1,7 +1,3 @@
-<div class="poem">
-    <p>“Poetry, she thought, wasn't written to be analyzed; it was meant to inspire without reason, to touch without understanding.”</p>
-</div>
-
-
 <?php
+include_once '../../public/includes/poem.html';
 include '../app/views/end.php';

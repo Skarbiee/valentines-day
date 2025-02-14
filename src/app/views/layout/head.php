@@ -8,5 +8,4 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/c5ea563261.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
