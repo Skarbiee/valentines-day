@@ -9,10 +9,10 @@ $request = $_SERVER['REQUEST_URI'];
 
 function includeComponent($component)
 {
-    include '../app/views/layout/head.php';
-    include '../app/views/layout/header.php';
-    include '../app/views/' . $component . '.php';
-    include '../app/views/layout/footer.php';
+    include __DIR__ .'/../app/views/layout/header.php';
+    include __DIR__ .'/../app/views/layout/head.php';
+    include __DIR__ .'/../app/views/' . $component . '.php';
+    include __DIR__ .'/../app/views/layout/footer.php';
 }
 
 
