@@ -31,12 +31,12 @@ h2 {
     font-size: 5em;
 }
 
-p{
+p {
     font-size: 1.5em;
 }
 
-.init{
-    display:flex;
+.init {
+    display: flex;
     margin: 0;
     padding: 0;
     background-color: #f6bbcf;
@@ -48,7 +48,7 @@ p{
     justify-content: center;
     align-self: center;
     text-align: center;
-    
+
 }
 
 .mail img {
@@ -87,6 +87,20 @@ header ul li a {
     font-size: 5em;
 }
 
+.home,
+.unlock,
+.cards,
+.cups,
+.poem,
+.calendar,
+.end {
+    height: 40em;
+    align-items: center;
+    display: flex;
+
+
+}
+
 .page404 {
     display: flex;
     flex-direction: column;
@@ -96,15 +110,12 @@ header ul li a {
 }
 
 .page404 img {
-    width: 20%;
+    width: 20em;
     margin-bottom: 2em;
 }
 
 .home {
-    display: flex;
-    height: 40em;
     flex-direction: column;
-    align-items: center;
     padding: 0em 8em;
     text-align: center;
     justify-content: center;
@@ -126,6 +137,7 @@ header ul li a {
     max-width: 100vw;
     height: 100vh;
 }
+
 .heart-scale img {
     position: absolute;
     top: 0;
@@ -135,55 +147,13 @@ header ul li a {
     object-fit: cover;
 }
 
-.unlock {
-    align-items: center;
-    height: 40em;
-    display: flex;
-    justify-content: space-evenly;
-    border-bottom: #e3252f solid 2px;
-}
-.unlock-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fa9ec6;
-    height: 30em;
-    width: 20em;
-    padding: 4em 1em 0em 1em;
-    border: #e3252f solid 2px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-.unlock img{
-    width: 13em;
-}
-.unlock-text{
-    display: flex;
-    margin-top: 4em;
-    width: 60%;
-    font-size: 0.5em;
-}
-.unlock-desc {
-    flex-direction: column;
-    text-align: center;
-    width: 35em;
-}
-
-span, .fa-comment{
-    color: black;
-}
-
-span {
-    font-size: 1.5em;
-    font-family: Arial, sans-serif;
-}
-
+.unlock,
 .cards {
-    align-items: center;
-    height: 40em;
-    display: flex;
     justify-content: space-evenly;
     border-bottom: #e3252f solid 2px;
 }
+
+.unlock-container,
 .cards-container {
     display: flex;
     flex-direction: column;
@@ -195,32 +165,93 @@ span {
     border: #e3252f solid 2px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-.cards img {
+
+.unlock-text {
+    display: flex;
+    margin-top: 4em;
+    width: 60%;
+    font-size: 0.5em;
+}
+
+.unlock-desc {
+    flex-direction: column;
+    text-align: center;
+    width: 35em;
+}
+
+span,
+.fa-comment {
+    color: black;
+}
+
+span {
+    font-size: 1.5em;
+    font-family: Arial, sans-serif;
+}
+
+.cards img,
+.poem-container img,
+.unlock img {
     width: 13em;
 }
+
+.cups-container {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.cups-container img {
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cups img:hover {
+    animation: rotateAnimation 0.7s linear infinite;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(50deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-50deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 .cards-text {
     display: flex;
     margin-top: 4em;
     width: 60%;
     font-size: 0.5em;
 }
+
 .cards-desc {
     flex-direction: column;
     text-align: center;
     width: 35em;
 }
 
-.cups {
-    display: flex;
+.cups,
+.poem,
+.calendar {
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    height: 40em;
     justify-content: center;
     border-bottom: #e3252f solid 2px;
 }
 
-.cups-container img{
+.cups-container img {
     width: 10em;
     margin-top: 3em;
 }
@@ -247,13 +278,13 @@ span {
     z-index: 2;
 }
 
-.air-desc{
+.air-desc {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.air-desc h3{
+.air-desc h3 {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     background-color: #f6bbcf;
     border-radius: 10px;
@@ -263,15 +294,14 @@ span {
 }
 
 .poem {
-    display: flex;
-    height: 40em;
-    align-items: center;
-    flex-direction: column;
     justify-content: space-evenly;
-    border-bottom: #e3252f solid 2px;
 }
 
-.poem-container{
+.poem>p {
+    margin: 0 3em;
+}
+
+.poem-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -279,30 +309,19 @@ span {
     width: 100%;
 }
 
-.poem-container p{
+.poem-container p {
     background-color: #f8edf3;
     padding: 0.3em;
     border-radius: 10px;
     border: 2px solid #e3252f;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.poem-container img{
-    width: 13em;
 }
 
 .calendar {
     background-color: #fa9ec6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 40em;
-    justify-content: center;
-    border-bottom: #e3252f solid 2px;
 }
 
-.calendar p{
+.calendar p {
     background-color: #f8edf3;
     padding: 0.3em;
     border-radius: 10px;
@@ -310,19 +329,17 @@ span {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.calendar-container img{
+.calendar-container img {
     width: 10em;
     margin-top: 3em;
 }
 
-.end{
-    display: flex;
-    height: 40em;
+.end {
     justify-content: space-evenly;
-    align-items: center;
+    text-align: center;
 }
 
-.end-container{
+.end-container {
     display: flex;
     position: relative;
 }
@@ -336,9 +353,298 @@ span {
     object-position: center 30%;
 }
 
+.end h3 {
+    width: 10em;
+    margin: 0 0.3em;
+}
+
 footer {
+    display: flex;
+    flex-direction: column;
     border-top: #e3252f solid 2px;
     text-align: center;
     padding: 2em 0;
     margin-top: 2rem;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3em 0;
+}
+
+footer nav a {
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+
+footer img {
+    width: 15em;
+}
+
+@media screen and (max-width: 1318px) {
+    .end h3 {
+        width: 8em;
+        margin: 0 0.8em;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+
+    .page404 img {
+        width: 15em;
+
+        h3 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 3em;
+        }
+
+        p {
+            font-size: 1.25em;
+        }
+
+        .heart-scale, .end {
+            height: 40em;
+        }
+
+        .end {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .end-container {
+            display: flex;
+            position: relative;
+        }
+
+        .end img {
+            border: #e3252f solid 2px;
+            width: 35em;
+            height: 25em;
+            object-fit: cover;
+            border-radius: 50% / 50%;
+            object-position: center 30%;
+        }
+    }
+
+    @media screen and (max-width: 1180px) {
+
+        .unlock,
+        .cards {
+            align-items: center;
+            height: 40em;
+            display: flex;
+            justify-content: space-evenly;
+            border-bottom: #e3252f solid 2px;
+        }
+
+        .unlock-container,
+        .cards-container {
+            height: 20em;
+            width: 15em;
+        }
+
+        .home img,
+        .cards img,
+        .poem-container img,
+        .unlock img {
+            width: 10em;
+        }
+
+        h2 {
+            font-size: 2.5em;
+        }
+
+        .end {
+            flex-direction: column;
+        }
+
+        .end h3 {
+            width: 20em;
+            margin: 0.5em;
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+
+        .page404 img {
+            width: 10em;
+        }
+
+        header>nav>ul>li>a {
+            font-size: 3em;
+        }
+
+        header {
+            height: 6em;
+        }
+
+        header ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        header ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+
+        .home p {
+            width: 20em;
+        }
+
+        .heart-scale, .air-ballon {
+            height: 30em;
+        }
+
+        .unlock {
+            flex-direction: column;
+        }
+
+        .unlock-container,
+        .cards-container {
+            margin-top: 2em;
+        }
+
+        .cards {
+            flex-direction: column-reverse;
+        }
+
+        .cups {
+            height: 35em;
+        }
+
+        .air-ballon h3 {
+            margin-top: 2em;
+        }
+
+
+        .poem>p {
+            width: 30em;
+        }
+
+        .poem-container {
+            flex-direction: column;
+        }
+
+        .balloon {
+            left: -20%;
+        }
+
+        .calendar p, .poem p, .cups p{
+            width: 20em;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        header>nav>ul>li>a {
+            font-size: 2em;
+        }
+
+        header {
+            height: 4em;
+        }
+
+        h2 {
+            font-size: 1.75em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        .home, .cups, .poem, .calendar, .end {
+            height: 30em;
+        }
+
+        .cups img {
+            width: 8em;
+            padding-bottom: 2em;
+        }
+
+        .balloon {
+            left: -50%;
+        }
+
+        .cups>p,
+        .poem>p,
+        .calendar>p {
+            width: 20em;
+        }
+
+        .poem img {
+            width: 8em;
+        }
+
+        .end img {
+            width: 15em;
+            height: 10em;
+        }
+
+        .end h3 {
+            margin: 0;
+        }
+    }
+
+    @media screen and (max-width: 560px) {
+        h2 {
+            font-size: 1.2em;
+        }
+
+        h3,
+        footer nav a {
+            font-size: 1.15em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        header>nav>ul>li>a {
+            font-size: 1.5em;
+            margin: 0;
+            width: 100%;
+        }
+
+        header {
+            height: 3em;
+            margin: 0;
+        }
+
+        .home {
+            height: 25em;
+        }
+
+        .home p {
+            width: 15em;
+            font-size: 1em;
+        }
+
+        .balloon {
+            left: -120%;
+            width: 12em;
+        }
+
+        .unlock-desc,
+        .cards-desc,
+        .cups>p,
+        .poem p,
+        .calendar p,
+        .i-love-you img {
+            width: 15em;
+        }
+    }
 }
