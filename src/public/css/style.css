@@ -18,7 +18,7 @@
     src: url('../assets/fonts/PPEditorialNew-Regular.otf');
 }
 
-*{
+* {
     color: #e3252f;
     font-family: 'EditorialNew';
 }
@@ -55,17 +55,33 @@ header ul li a {
     font-size: 5em;
 }
 
+.mail{
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+}
+
+.mail img{
+    width: 30em;
+}
+
 .page404 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:0em 8em;
+    padding: 0em 8em;
     text-align: center;
     margin-bottom: 2em;
 }
 
-.page404 h3{
+h3 {
     font-size: 3em;
+}
+
+h2 {
+    font-size: 5em;
 }
 
 .page404 img {
@@ -77,17 +93,39 @@ header ul li a {
     font-size: 1.5em;
 }
 
-.home {
+/*sections*/
+.home,
+.heart-scale,
+.unlock,
+.cards,
+.poem,
+.end {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding:0em 8em;
-    text-align: center;
-    margin-bottom: 2em;
 }
 
-.home h3{
-    font-size: 3em;
+.home,
+.unlock,
+.cards,
+.cups,
+.poem,
+.end {
+    padding: 4em 0em 8em 0em;
+    /* Ajoute un peu d'espace autour du texte */
+}
+
+.unlock,
+.cards,
+.cups,
+.poem {
+    border-bottom: #e3252f solid 2px;
+}
+
+.home {
+    flex-direction: column;
+    align-items: center;
+    padding: 0em 8em;
+    text-align: center;
+    margin-bottom: 2em;
 }
 
 .home img {
@@ -102,81 +140,176 @@ header ul li a {
 .heart-scale {
     border-bottom: #e3252f solid 2px;
     border-top: #e3252f solid 2px;
-    position: relative; /* Conteneur parent pour la position relative */
-    display: flex;
+    position: relative;
+    /* Conteneur parent pour la position relative */
     justify-content: center;
     align-items: center;
     overflow: hidden;
     max-width: 100vw;
-    height: 60em; /* Taille du conteneur */
+    height: 60em;
+    /* Taille du conteneur */
 }
 
 .heart-scale img {
-    position: absolute; /* L'image passe en arrière-plan */
+    position: absolute;
+    /* L'image passe en arrière-plan */
     top: 0;
     left: 0;
-    width: 100%; /* L'image occupe tout le conteneur */
-    height: 100%; /* Adapte à la hauteur */
-    object-fit: cover; /* Maintient l'échelle sans déformer */
+    width: 100%;
+    /* L'image occupe tout le conteneur */
+    height: 100%;
+    /* Adapte à la hauteur */
+    object-fit: cover;
+    /* Maintient l'échelle sans déformer */
 }
 
-.cards-heart {
+.unlock {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 2em 0;
-    padding: 4em 0em 8em 0em; /* Ajoute un peu d'espace autour du texte */
+    justify-content: space-evenly;
     border-bottom: #e3252f solid 2px;
 }
 
-.cards-heart .heart-container {
+.unlock .heart-container,
+.cards .cards-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fa9ec6;/*Couleur semi-transparente pour contraste */
-    padding: 4em 0em 8em 0em; /* Ajoute un peu d'espace autour du texte */
+    background-color: #fa9ec6;
+    text-align: center;
+    height: 30em;
+    width: 20em;
+    padding: 4em 1em 0em 1em;
+    /* Ajoute un peu d'espace autour du texte */
     border: #e3252f solid 2px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
-    width: 20%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Ajoute une ombre */
     margin-bottom: 2em;
 }
 
-.hearts-cards {
-    width: 60%;
-    display: flex;
+.unlock-heart {
+    width: 70%;
 }
 
-.cards-heart .heart-text {
+.unlock .unlock-text,
+.cards .cards-text {
     display: flex;
     margin-top: 4em;
     justify-content: flex-start;
-    width: 70%;
+    width: 60%;
     font-size: 0.5em;
 }
 
-.fa-comment{
+.fa-comment,
+.unlock span,
+.cards span {
     color: black;
 }
 
-.cards-heart span{
-    color: black;
+.unlock span,
+.cards span {
     font-size: 1.5em;
     font-family: Arial, sans-serif;
 }
 
-.cards-heart h3,
-.cards-heart p {
+.unlock-desc {
     display: flex;
-    margin: 0 10em;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 35em;
+    margin: 0;
+    padding: 0;
+}
+
+.unlock p {
     font-size: 1.5em;
 }
 
-.cards-title {
-    font-size: 3em;
+.cards {
+    display: flex;
+    margin: 2em 0;
+    justify-content: space-evenly;
+    border-bottom: #e3252f solid 2px;
+}
+
+.cards-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 35em;
+    margin: 0;
+    padding: 0;
+}
+
+.cards p {
+    font-size: 1.5em;
+}
+
+.cards-heart {
+    width: 80%;
+}
+
+.cups {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-.poem p{
+.cups-desc p {
+    font-size: 1.5em;
+    margin-bottom: 4em;
+}
+
+.cups .two-of-cups {
+    width: 15em;
+}
+.air-desc{
+    display: flex;
+    flex-direction: column;
+    margin: 0 40em;
+    width: 100%;
+}
+
+.air-desc h3{
+    background-color: #fa9ec6a9;
+    border-radius:  10px;
+    padding: 0.5em 0 0.4em 0;
+}
+
+.air-ballon {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+    /* La section prend la moitié de la page */
+    background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    /* Dégradé ciel bleu */
+    overflow: hidden;
+    /* Empêche les débordements */
+    border-bottom: #e3252f solid 2px;
+}
+
+.balloon {
+    position: absolute;
+    bottom: 20%;
+    /* Position initiale */
+    left: 10%;
+    /* Position initiale horizontale */
+    width: 10em;
+    /* Taille du ballon */
+    height: auto;
+    /* Garder les proportions */
+    transform: translate(0, 0);
+    /* Translation initiale */
+    z-index: 2;
+}
+
+
+.poem p {
     font-size: 1.5em;
 }
 
