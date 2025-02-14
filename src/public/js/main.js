@@ -3,7 +3,7 @@ const image = document.querySelector('.heart-scale img');
 
 // Définir les valeurs minimum et maximum de scale
 const minScale = 1; // Taille initiale
-const maxScale = 2.5; // Taille maximale
+const maxScale = 3; // Taille maximale
 
 // Ajoute un gestionnaire d'événement pour suivre le scroll
 window.addEventListener('scroll', () => {

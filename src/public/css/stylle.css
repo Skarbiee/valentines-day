@@ -1,0 +1,14 @@
+/*sections*/
+.poem{
+    display: flex;
+}
+
+.poem {
+    border-bottom: #e3252f solid 2px;
+}
+
+.poem p {
+    font-size: 1.5em;
+}
+
+
