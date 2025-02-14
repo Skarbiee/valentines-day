@@ -1,28 +1,29 @@
-*{
-    color: #e3252f;
-}
 @font-face {
     font-family: 'Quentin';
-    src: url('/assets/fonts/Quentin.otf');
+    src: url('../assets/fonts/Quentin.otf');
 }
 
 @font-face {
     font-family: 'LOVERBOY';
-    src: url('/assets/fonts/LOVERBOY.TTF');
+    src: url('../assets/fonts/LOVERBOY.TTF');
 }
 
 @font-face {
     font-family: 'BeMine';
-    src: url('/assets/fonts/beMine.ttf');
+    src: url('../assets/fonts/beMine.ttf');
 }
 
 @font-face {
     font-family: 'EditorialNew';
-    src: url('/assets/fonts/PPEditorialNew-Regular.otf');
+    src: url('../assets/fonts/PPEditorialNew-Regular.otf');
+}
+
+*{
+    color: #e3252f;
+    font-family: 'EditorialNew';
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f6bbcf;
@@ -59,8 +60,6 @@ header ul li a {
     flex-direction: column;
     align-items: center;
     padding:0em 8em;
-    /* Ajoute un peu d'espace autour du texte */
-    font-family: 'EditorialNew';
     text-align: center;
     margin-bottom: 2em;
 }
@@ -83,8 +82,6 @@ header ul li a {
     flex-direction: column;
     align-items: center;
     padding:0em 8em;
-    /* Ajoute un peu d'espace autour du texte */
-    font-family: 'EditorialNew';
     text-align: center;
     margin-bottom: 2em;
 }
@@ -105,28 +102,22 @@ header ul li a {
 .heart-scale {
     border-bottom: #e3252f solid 2px;
     border-top: #e3252f solid 2px;
-    position: relative;
-    /* Conteneur parent pour la position relative */
+    position: relative; /* Conteneur parent pour la position relative */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     max-width: 100vw;
-    height: 60em;
-    /* Taille du conteneur */
+    height: 60em; /* Taille du conteneur */
 }
 
 .heart-scale img {
-    position: absolute;
-    /* L'image passe en arrière-plan */
+    position: absolute; /* L'image passe en arrière-plan */
     top: 0;
     left: 0;
-    width: 100%;
-    /* L'image occupe tout le conteneur */
-    height: 100%;
-    /* Adapte à la hauteur */
-    object-fit: cover;
-    /* Maintient l'échelle sans déformer */
+    width: 100%; /* L'image occupe tout le conteneur */
+    height: 100%; /* Adapte à la hauteur */
+    object-fit: cover; /* Maintient l'échelle sans déformer */
 }
 
 .cards-heart {
@@ -170,13 +161,13 @@ header ul li a {
 .cards-heart span{
     color: black;
     font-size: 1.5em;
+    font-family: Arial, sans-serif;
 }
 
 .cards-heart h3,
 .cards-heart p {
     display: flex;
     margin: 0 10em;
-    font-family: 'EditorialNew';
     font-size: 1.5em;
 }
 
@@ -186,13 +177,11 @@ header ul li a {
 }
 
 .poem p{
-    font-family: 'EditorialNew';
     font-size: 1.5em;
 }
 
 .end p {
     font-size: 1.5em;
-    font-family: 'EditorialNew';
 }
 
 footer {

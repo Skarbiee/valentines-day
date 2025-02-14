@@ -9,29 +9,17 @@ $request = $_SERVER['REQUEST_URI'];
 
 function includeComponent($component)
 {
-    include __DIR__ .'/../app/views/layout/header.php';
-    include __DIR__ .'/../app/views/layout/head.php';
-    include __DIR__ .'/../app/views/' . $component . '.php';
-    include __DIR__ .'/../app/views/layout/footer.php';
+    include '' . $component . '.html';
 }
 
 
 switch ($request) {
     case '/':
     case '/home':
-        includeComponent('home');
-        break;
-    case '/heart':
-        includeComponent('heart');
-        break;
-    case '/cards':
-        includeComponent('cards');
-        break;
-    case '/contact':
-        includeComponent('contact');
+        includeComponent('index');
         break;
     default:
-        includeComponent('404');
+        includeComponent('includes/404');
         break;
 }
 ?>
